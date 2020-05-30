@@ -1,6 +1,15 @@
 import React from "react";
 import ChatBox from "../lib";
 
+import Navbar from './Navbar';
+import Hero from './Hero';
+import Exemplar from './Exemplar';
+import Features from './Features';
+import About from './About';
+import LatestNews from './LatestNews';
+import SocialBrand from './SocialBrand';
+import Footer from './Footer';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -29,7 +38,7 @@ class App extends React.Component {
   };
   render() {
     return (
-      <div>
+      <div id="app">
         <ChatBox
           agentProfile={{
             teamName: "react-live-chat",
@@ -40,7 +49,17 @@ class App extends React.Component {
           messageList={this.state.messageList}
           showEmoji
         />
-      </div>
+       
+            <Navbar />
+      <Hero />
+      <Exemplar />
+      <Features />
+      <About />
+      <LatestNews />
+      <SocialBrand />
+      <Footer />
+      
+    </div>
     );
   }
 }
